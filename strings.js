@@ -127,6 +127,72 @@ let spliter = "hello do you need some oranges?";
 let splittedStr = spliter.split("");
 console.log(splittedStr);
 
+// String methods
+// indexOf(), [], charAt(), replace(), slice(), length
+
+console.log("hello".length);
+
+// at() method 
+const sentence = "hello do you need some superv paragraphs?";
+const index = -1;// -1 returns the last character in a string
+console.log(`Index ${index} returns character ${sentence.at(index)}`);
+
+// comparing charAt(), slice(), and at() methods
+const longTxt = "This is a comparison of three different string methods to achieve the same thing";
+// Retrieve the second last character in the above string using charAt().
+const usingCharAt = longTxt.charAt(longTxt.length - 2);
+console.log(usingCharAt);
+
+// Retrieve the second last character in the above string using slice().
+const usingSlice = longTxt.slice(-2, -1);
+console.log(usingSlice);
+
+// Retrieve the second last character in the above string using at().
+const usingAt = longTxt.at(-2);
+console.log(usingAt);
+
+// charCodeAt() returns the character code corresponding to the specified character in the string
+const charCode = "This code returns the character code of the specified character in the the given index";
+
+let index1 = -200;
+
+const finalRes = `The character code ${charCode.charCodeAt(index1)} is for the character ${charCode.at(index1)}`;
+console.log(finalRes);
+
+// `The character code ${charCode.codePointAt(index1)} is for the character ${charCode.at(index1)}`;
+// console.log(finalRes);
+
+// concat()
+const str1 = "hello";
+const str3 = "world";
+
+const combined = str1.concat(' ', str3);
+console.log(combined);
+
+// concatenate using + operator
+const combined2 = str1 + ' ' + str3;
+console.log(combined2);
+
+// using template literals to concatenate strings
+const combined3 = `${str1} ${str3}`;
+console.log(combined3);
+
+// endsWith()
+const endsWith = "hello world";
+const lastWord = endsWith.endsWith("o");
+console.log(lastWord);
+
+// includes() - It is a case sensitive method
+const includes = "hello worlD";
+const contains = includes.includes("D");
+const contains2 = includes.toLowerCase().includes("d");
+console.log(contains2);
+console.log(contains);
+
+
+
+
+
 
 
 
