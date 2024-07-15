@@ -189,6 +189,95 @@ const contains2 = includes.toLowerCase().includes("d");
 console.log(contains2);
 console.log(contains);
 
+// isWellFormed() returns true if the string contains a well formatted string.
+console.log("Is well formed: ");
+const strings = [
+    // Lone leading surrogate
+    "ab\uD800",
+    "ab\uD800c",
+    // Lone trailing surrogate
+    "\uDFFFab",
+    "c\uDFFFab",
+    // Well-formed
+    "abc",
+    "ab\uD83D\uDE04c",
+  ];
+
+ for (const str of strings) {
+    console.log(str.isWellFormed());
+  }  
+
+  // catching errors in isWellFormed() method
+  console.log("Catching errors in isWellFormed");
+
+  const illFormed = "https://example.com/search?q=\uD800";
+
+try {
+  encodeURI(illFormed);
+} catch (e) {
+  console.log(e); // URIError: URI malformed
+}
+
+if (illFormed.isWellFormed()) {
+  console.log(encodeURI(illFormed));
+} else {
+  console.warn("Ill-formed strings encountered."); // Ill-formed strings encountered.
+}
+
+
+// lastIndexOf()
+// The lastIndexOf() method of String values searches this string and 
+//returns the index of the last occurrence of the specified substring. 
+//It takes an optional starting position and returns the last occurrence of the specified substring at an index less than or equal to the specified number
+const lastItem = "hello this is the last item in the string";
+
+console.log(lastItem.lastIndexOf(("string")));
+
+// match() method should  return a string representation of the string
+
+const matches = "The Orange 2 JUice was Sweet 1."
+const regex = /[a-z]/g;
+console.log(matches.match(regex));
+
+// padEnd() returns a string with spaces at the end or the the second argument provided in the method
+const padEnd = "This string demonstrates the padEnd method";
+console.log(padEnd.padEnd(45, "1"));
+
+// padStart() returns a string with spaces at the beginning or the the second argument provided in the method
+const padStart = "hello";
+
+
+console.log(padStart.padStart(13, "world"));
+
+// repeat() returns a new string with the original string repeated n times
+const repeated1 = "hello world";
+const repeated = repeated1.repeat(3);
+console.log(repeated);
+
+// replace() returns a new string with the original string. The original string will remain unchanged
+
+// const strNew = "hello world";
+// const replaced = strNew.replace("world", "universe");
+
+const strNew = "hello world";
+const replaced = /WORLD/i;
+console.log(strNew.replace(replaced, "global"));
+
+// replaceAll() replaces all occurrences of the given string
+
+// const moreThanOne = "hello guys! hello world!";
+// console.log(moreThanOne.replaceAll("hello", "Hi"));
+
+// use replaceAll() with regex
+const moreThanOne = "hello guys! Hello world!";
+const pattern = /HELLO/gi
+console.log(moreThanOne.replaceAll("hello", "Hi"));
+
+
+
+
+ 
+
 
 
 
