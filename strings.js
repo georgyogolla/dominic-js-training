@@ -273,6 +273,59 @@ const moreThanOne = "hello guys! Hello world!";
 const pattern = /HELLO/gi
 console.log(moreThanOne.replaceAll("hello", "Hi"));
 
+// search() 
+// executes a search for a match between a regular expression and this string, 
+// returning the index of the first match in the string
+
+const noneWordCharacters = "I think Ruth's dog is cuter than your dog!";
+const regexPattern =  /[^\w\s']/g;
+// /[^\w\s']/g;
+
+console.log(noneWordCharacters.search(regexPattern));// returns the index number of the resulting string string
+
+console.log(noneWordCharacters[noneWordCharacters.search(regexPattern)]);// returns the string 
+
+
+// substring()  returns the substring of the string 
+// It works similar to slice() except for a few reason:
+// 1. The substring() method swaps its two arguments if indexStart is greater than indexEnd, 
+//meaning that a string is still returned. 
+//The slice() method returns an empty string if this is the case.
+
+// 2. If either or both of the arguments are negative or NaN, the substring() method treats them as if they were 0
+
+console.log("Replacing a string using split() and join()");
+
+function replaceString(oldS, newS, fullS) {
+  return fullS.split(oldS).join(newS);
+}
+
+const finalResults = replaceString("World", "Web", "Brave New World");
+console.log(finalResults);
+
+// toLocaleLowerCase() 
+
+const dotted = 'İstanbul';
+
+console.log(`EN-US: ${dotted.toLocaleLowerCase('en-US')}`);
+
+
+console.log(`TR: ${dotted.toLocaleLowerCase('tr')}`);
+
+// toLocaleUpperCase() 
+// trimEnd() removes trailing spaces
+console.log("Trim white spaces at the end of the string");
+const toTrim = "hello     "
+console.log(toTrim.trimEnd());
+
+// trimStart() removes leading spaces
+console.log("Trim white spaces at the start of the string");
+const toTrimStart = "  hello"
+console.log(toTrimStart.trimStart());
+
+// valueOf() returns a string
+const newString = "I am the valueOf()";
+console.log(newString.valueOf());
 
 
 
