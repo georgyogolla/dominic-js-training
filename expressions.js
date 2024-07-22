@@ -147,4 +147,75 @@ function config(options) {
   let obj = { name: "John", age: 30 };
   console.log(delete obj.name); // true
   console.log(obj);
+
+  // unary operator
+// Adds 1 to the operand  If used as a prefix operator (++x)
+//  returns the value of its operand after adding one
+  let unOperator = 2;
+  console.log(unOperator); //
+  console.log(++unOperator);
+  console.log(unOperator); // true
+
+  console.log("POSTFIX UNARY OPERATOR"); //
+  // if used as a postfix operator (x++)
+  // returns the value of its operand before adding one
+
+  let valTwo = 3;
+  console.log(valTwo); //
+  console.log(valTwo++); //
+  console.log(valTwo); //
+
+  // (--x) and (x--) works same as (++x) and (x++).
+  // Only difference is that one subtracts and the other adds
+
+  // unary negation (-x) -> Returns the negation of its operand. e.g if (x = 1) the negation of the operand is (-1)
+  // unary plus (+x) ->  Attempts to convert the operand to a number, if it is not already e.g "1" wil be 1;
+
+  // LOGICAL OPERATORS
+  // LOGICAL AND(&&)
+  // && - returns true if both operands are true otherwise returns false if only one side is true
+  // e.g true && true -> true;
+  // e.g true && false -> false;
+
+  // returns the first operand if it can be converted to false otherwise it returns the second operand.
+  // e.g
+  console.log(1 && 2);// 2
+  console.log(null && 4);// null
+
+  // LOGICAL OR(||)
+  // Returns expr1 if it can be converted to true; 
+  // otherwise, returns expr2. Thus, when used with Boolean values, || returns true if either operand is true;
+  // if both are false, returns false
+
+  console.log(1 || 2); //1
+  console.log(null || 3);// 3
+  console.log(true || false);// true
+
+  // NULLISH COALESCING OPERATOR
+  // expre1 ?? expre2
+  // Returns expr1 if it is neither null nor undefined; otherwise, returns expr2.
+  // e.g
+  console.log(1 ?? 2); // 1
+  console.log(null || 3); //3
+
+  // shorthand assignment operator (+=)
+  // can also concatenate strings
+  // e.g 
+  let vowels = "aei";
+  vowels += "ou";
+  console.log(vowels); //
+
+  // A unary operation is an operation with only one operand.
+
+ //delete
+// The delete operator deletes an object's property.
+
+const obj1 = {name:"kk", age:20};
+delete obj1.age;
+console.log(obj1);//{ name: 'kk' }
+
+
+
+
+
   
