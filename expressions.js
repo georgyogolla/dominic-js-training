@@ -215,6 +215,22 @@ delete obj1.age;
 console.log(obj1);//{ name: 'kk' }
 
 
+// RELATIONAL OPERATORS
+// in - The in operator returns true if the specified property is in the specified object
+const fruitJuicePrice = {orangeJuice: 100, mangoJuice: 200};
+console.log("mangoJuice" in fruitJuicePrice); // true; - you have to use the key as a string in order to get results
+
+// using in with arrays
+const fruits = ["apple", "banana", "orange"];
+console.log(1 in fruits); // true; - in is only used with index in arrays
+
+// instaceof - The instanceof operator returns true if the specified object is of the specified object type
+const arrs = [1,2,3];
+console.log(arrs instanceof Object);//true
+
+const newDay = new Date(23-7-2024);
+console.log(newDay instanceof Date);//true
+
 
 
 
