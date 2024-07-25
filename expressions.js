@@ -231,6 +231,45 @@ console.log(arrs instanceof Object);//true
 const newDay = new Date(23-7-2024);
 console.log(newDay instanceof Date);//true
 
+// Basic expressions
+// this keyword
+const nairobiEstates = {
+  embakasi: "utawala",
+  kikuyu: "uthiru",
+  kasarani: "kamwokya",
+  kenyatta: "kibwezi",
+  hello: function(){
+    console.log("how a you");
+  }
+
+}
+console.log(nairobiEstates.hello(), this);
+// console.log(nairobiEstates, this);
+// console.log(nairobiEstates.embakasi, this);
+
+// GROUPING OPERATOR ()
+
+// OPTIONAL CHAINING OPERATOR (?.)
+const food = {
+  drinks: {
+    cold: "milk",
+    warm: "tea"
+  },
+  fruits: "mango"
+  
+}
+
+const sweetFood = food.vegetable?.fruits;
+console.log(sweetFood);// if vegetable is undefined or null then the result will be undefined
+
+const sugar = food.drinks?.warm
+console.log(sugar);// tea 
+
+// new operator - applicable in javascript classes
+// super - applicable in javascript classes
+
+
+
 
 
 
