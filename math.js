@@ -23,10 +23,10 @@ console.log(circum2);
 function abs(a, b){
     return Math.abs(a + b);
 }
-const ab = abs(2, -3);
+const ab = abs(2, -3);// 1
 console.log(ab);
-
-console.log(Math.abs(-3));
+console.log('Math asbolute with decimal numbers');
+console.log(Math.abs(-3.56));//3
 // Math.abs() returns NaN when the argument passed cannot be coerced to a number
 // e.g
 console.log(Math.abs("hello"));// NaN 
@@ -59,10 +59,46 @@ console.log(Math.min(-2, -3, -9));// -9
 console.log(Math.pow(2, 4));
 console.log(Math.pow(2, -4));
 
+console.log('math power of string');
 console.log(Math.pow("4", "2"));
 
 // The Math.random() static method returns a floating-point, 
 // pseudo-random number that's greater than or equal to 0 and less than 1
-console.log();
+console.log(Math.floor(Math.random() * 6)); // random numbers betwenn 0 and 6
+
+// Math.round() 
+// The Math.round() static method returns the value of a number rounded to the nearest integer.
+console.log(Math.round(22.51));// 23
+console.log(Math.round(-20.5)); // -20
+
+// Math.sign
+// Returns the sign of the input, indicating whether it is positive, negative, or zero.
+
+console.log('Results of Math.sign()');
+console.log(Math.sign(0)); // 0
+console.log(Math.sign(10)); // 1
+console.log(Math.sign(-10)); // -1
+console.log(Math.sign(-0)); // -0
+console.log(Math.sign("hello")); // NaN
+console.log(Math.sign(Infinity)); // 1
+
+// Math.sqrt()
+// The Math.sqrt() static method returns the square root of a number. 
+console.log('Results of Math.sqrt()');
+console.log(Math.sqrt(25)); // 5
+console.log(Math.sqrt(0)); // 0
+console.log(Math.sqrt(-1)); // NaN
+console.log(Math.sqrt("hello")); // NaN
+console.log(Math.sqrt(Infinity)); // Infinity
+
+
+// Returning a random integer between two bounds
+console.log('Random integer between two bounds');
+const maxVal = 20;
+const minVal = 10;
+console.log(Math.floor(Math.random() * (maxVal + minVal) + minVal)); // random numbers between 10 and 20
+
+
+
 
 
