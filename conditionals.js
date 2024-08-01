@@ -69,3 +69,83 @@ if(password2.length >= 8 || password2.indexOf(" ") === -1){
 } else {
     console.log("This password seems to be false");
 }
+
+// use a variable name on its own to test whether it is true, or even that it exists (that is, it is not undefined.)
+
+const vowels = "aeiou";
+if(vowels){
+    console.log(`Truee!! Those are vowels, ${vowels}`);
+} else {
+    console.log('Falsee!! Those are not vowels');
+}
+
+// using not(!) with conditionals
+let isLoggedIn = true;
+let username = "kabambe";
+
+if(!(false || username === "Joshua")){
+    console.log("You are logged in");
+} else {
+    console.log("You can access the site");
+}
+
+// Switch statements
+let month = 13;
+
+switch(month){
+    case 1:
+        console.log("January");
+        break;
+    case 2:
+        console.log("February");
+        break;
+    case 3:
+        console.log("March");
+        break;
+    case 4:
+        console.log("April");
+        break;
+    case 5:
+        console.log("May");
+        break;
+    case 6:
+        console.log("June");
+        break;
+    case 7:
+        console.log("July");
+        break;
+    case 8:
+        console.log("August");
+        break;
+    case 9:
+        console.log("September");
+        break;
+    case 10:
+        console.log("October");
+        break;
+    case 11:
+        console.log("November");
+        break;
+    case 12:
+        console.log("December");
+        break;
+    default:
+        console.log("Invalid month");
+}
+
+// use switch statement with weather variables
+let weather = "Coldy";
+
+switch(weather){
+    case "Sunny":
+        console.log("It's a beautiful day!");
+        break;
+    case "Rainy":
+        console.log("It's raining!");
+        break;
+    case "Cloudy":
+        console.log("It's a bit cloudy.");
+        break;
+    default:
+        console.log("Unknown weather condition");
+}
