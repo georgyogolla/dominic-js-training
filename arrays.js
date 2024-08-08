@@ -42,9 +42,35 @@ const colors = ['red', 'green', 'yellow'];
 colors.length = 5;
 colors[4] = 'pink';
 
+// .forEach() won't visit any empty slots in the array
 colors.forEach((color, index) => {
     console.log(`Index: ${index}, Color: ${color}`);
 });
+
+// Newer methods (e.g. keys) do not treat empty slots specially and treat them as if they contain undefined. 
+// Methods that conflate empty slots with undefined elements include the following: entries(), fill(), find(), findIndex(), findLast(), findLastIndex(), includes(), join(), keys(), toLocaleString(), toReversed(), toSorted(), toSpliced(), values(), and with().
+
+const eplTeams = ["arsenal", "man u", "chelsea"];
+eplTeams.length = 8;
+eplTeams[7] = "everton";
+
+const iteratedTeams = eplTeams.keys();
+
+for(team of iteratedTeams){
+    console.log(`${team}:${eplTeams[team]}`);
+}
+// undefined is returned for empty slots in the array
+// Arrays stores their values by reference. References may refer to some imaginary/unique addres like IP addresses somewhere in the memory
+// example:
+const nums = [1, 2, 3];
+const nums2 = nums;// elements of nums are copied into the nums2
+nums.push(5);
+// both nums2 and nums will be updated with the pushed element because both arrays points to the same reference in the memory
+
+console.log(nums);// [ 1, 2, 3, 5 ]
+console.log(nums2); // [ 1, 2, 3, 5 ]
+
+
 
 
 
