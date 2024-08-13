@@ -245,8 +245,6 @@ console.log(padEnd.padEnd(45, "1"));
 
 // padStart() returns a string with spaces at the beginning or the the second argument provided in the method
 const padStart = "hello";
-
-
 console.log(padStart.padStart(13, "world"));
 
 // repeat() returns a new string with the original string repeated n times
@@ -287,7 +285,7 @@ console.log(noneWordCharacters[noneWordCharacters.search(regexPattern)]);// retu
 
 
 // substring()  returns the substring of the string 
-// It works similar to slice() except for a few reason:
+// It works similar to slice() except for a few differences:
 // 1. The substring() method swaps its two arguments if indexStart is greater than indexEnd, 
 //meaning that a string is still returned. 
 //The slice() method returns an empty string if this is the case.
