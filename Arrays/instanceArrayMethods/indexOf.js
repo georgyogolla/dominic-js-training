@@ -70,3 +70,4 @@ console.log(Array.prototype.indexOf.call(obj, "z"));
 // indexOf first checks obj.length, which is undefined or 0.
 // With a length of 0, indexOf does not iterate through any elements, so it directly returns -1, indicating that the element was not found.
 
+// lastIndeOf() returns the index of the last element in the array or -1 if there is no such element
