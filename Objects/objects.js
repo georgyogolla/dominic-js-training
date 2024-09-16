@@ -35,7 +35,14 @@ function Car(make, model, year, owner){
     this.owner = owner   
 }
 
+Car.prototype.color = "gray";
 const audi = new Car("Audi", "A3", 2018, john);
+
+// inheritance
+console.log("INHERITANCE");
+
+console.log(audi.color);
+
 console.log(audi);
 
 // Using the Object.create() method
@@ -114,6 +121,26 @@ myCar[propertyName] = "Mustang";
 
 myCar["color"];
 console.log(myCar);
+
+console.log("Using Object.keys()");
+
+// Deleting properties in an Object
+const alphabets = new Object();
+
+alphabets.a = 1;
+alphabets.b = 2;
+alphabets.c = 3;
+alphabets.d = 4;
+
+// delete
+delete alphabets.a;
+delete alphabets.b;
+console.log(alphabets);
+//check if the deleted propeties exist
+console.log("a" in alphabets);
+
+
+
 
 
 
