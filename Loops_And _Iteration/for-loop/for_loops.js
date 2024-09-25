@@ -31,4 +31,4 @@ function countSelected(selectObject) {
     const musicTypes = document.selectForm.musicTypes;
     console.log(`You have selected ${countSelected(musicTypes)} option(s).`);
   });
-  
+ 

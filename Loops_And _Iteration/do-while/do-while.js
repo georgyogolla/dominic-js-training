@@ -42,7 +42,7 @@ do {
     // Prompt user to enter transfer amount
     amount = parseFloat(prompt("Enter the amount to transfer:"));
 
-    // Check if the amount is valid
+    // Check if the amount is valid number
     if (amount <= 0 || isNaN(amount)) {
         console.log("Invalid amount. Please enter a value greater than zero.");
     }
