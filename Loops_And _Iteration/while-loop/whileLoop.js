@@ -51,4 +51,20 @@ checkaandj: while (a < 4) {
   console.log("j =", j);
 }
 
+//
+let num = 0;
+while (num < 10) {
+    console.log(num);
+    num++;
+};
 
+
+let targetNum = Math.floor(Math.random() * 10);
+let guess = Math.floor(Math.random() * 10);
+
+while(guess !== targetNum){
+    console.log(`Guessed: ${guess}... INOCRRECT`);
+    guess = Math.floor(Math.random() * 10);
+    
+}
+console.log(`Correct... Guessed: ${guess} and targetNum: ${targetNum}`);
