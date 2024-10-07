@@ -70,11 +70,47 @@ console.log(arr[0]);// original
 
  //
  function avg(avg1, avg2){
-    let total = avg1 + avg2;
-    return total / 2;
+    // let total = avg1 + avg2;
+    // return total / 2;
+    return (avg1 +  avg2) / 2;
   }
   const av = avg(12, 13);
   console.log(av);
+
+  // find largest number between 2 numbers
+//   function findMax(num1, num2){
+//     return Math.max(num1, num2);
+//   }
+//   const maxNum = findMax(5, 10);
+//   console.log(maxNum);
+
+// function max(x, y){
+//     // return "hello world";
+//     if(x > y){
+//         return x;
+//     } else if( y > x){
+//         return y;
+//     } else {
+//         // console.log("Both numbers are equal");
+//         return `${x} and ${y} are equal`;
+        
+//     }
+// }
+// const maxNumber = max(10, 10);
+// console.log(maxNumber);
+
+// anonymous function expression
+const max = function(x, y){
+    if(x > y){
+        return x;
+    } else if(y > x){
+        return y;
+    } else {
+        return `${x} and ${y} are equal`;
+    }
+}
+console.log(max(10, 20));
+
  
 
 
