@@ -13,3 +13,15 @@ function laugh(){
 }
 
 callTwice(laugh);
+
+
+
+function makeBetween(min, max){
+    return function(val){
+        return val >=  min && val <= max; // returns boolean value
+
+    }
+
+}
+const withinRange = makeBetween(18, 50);
+console.log(withinRange(51)); 
