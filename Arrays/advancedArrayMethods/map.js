@@ -1,3 +1,4 @@
+// map() does not mutate arrays
 // The map() method calls a provided function on every element inside an array and returns the result from the function call in a new array.
 const nums = [1, 2, 3, 4, 5];
 const doubleNums = nums.map((num) => num + 2);
